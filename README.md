@@ -49,28 +49,27 @@ Software Versions:
 Project Structure
 
 Department-Computer-Science/
-│
-├── index.html
-├── about.html
-├── professors.html
-├── courses.html
-├── students.html
-├── research.html
-├── contact.html
-│
-├── css/
-│   └── style.css
-│
-├── js/
-│   └── script.js
-│
-├── img/
-│   ├── A1-An.jpg/
-│   ├── Concert1.jpg/
-│   └── Lab1-Labn.jpg/
-│   ├── log.jpg/
-│ 
-└── README.md
+* index.html
+* about.html
+* professors.html
+* courses.html
+* students.html
+* research.html
+* contact.html
+
+css/
+* style.css
+
+js/
+* script.js
+
+img/
+* A1-An.jpg/
+* Concert1.jpg/
+* Lab1-Labn.jpg/
+* log.jpg/
+
+README.md
 How to Run
 Download or clone the project repository.
 Open the project folder in Visual Studio Code.
