@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Courses | Department of Computer Science</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #07111f;
+            color: white;
+        }
+
+        /* HEADER */
+
+        .header {
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            background: #081525;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-area img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+        }
+
+        .logo-area h1 {
+            font-size: 18px;
+        }
+
+        .logo-area span {
+            display: block;
+            color: #19c6ff;
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        .back-btn {
+            text-decoration: none;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 10px 18px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #19c6ff;
+            color: #07111f;
+        }
+
+
+        /* HERO */
+
+        .courses-hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+            background:
+                linear-gradient(rgba(5,15,30,0.8), rgba(5,15,30,0.95)),
+                url("img/A1.jpg") center/cover;
+        }
+
+        .courses-hero span {
+            color: #19c6ff;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .courses-hero h2 {
+            font-size: 45px;
+            margin: 15px 0;
+        }
+
+        .courses-hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #bbb;
+            line-height: 1.7;
+        }
+
+
+        /* COURSES */
+
+        .courses {
+            max-width: 1150px;
+            margin: auto;
+            padding: 70px 20px;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .course-card {
+            background: #101d2d;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-6px);
+            border-color: #19c6ff;
+        }
+
+        .course-icon {
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(25,198,255,0.1);
+            border-radius: 12px;
+            color: #19c6ff;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .course-level {
+            color: #19c6ff;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .course-card h3 {
+            font-size: 24px;
+            margin: 10px 0 15px;
+        }
+
+        .course-card p {
+            color: #aaa;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .course-card ul {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .course-card li {
+            color: #ccc;
+            margin: 9px 0;
+        }
+
+        .course-card li i {
+            color: #19c6ff;
+            margin-right: 8px;
+        }
+
+        .course-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #19c6ff;
+            font-weight: bold;
+            border: 1px solid #19c6ff;
+            padding: 10px 16px;
+            border-radius: 7px;
+            transition: 0.3s;
+        }
+
+        .course-btn:hover {
+            background: #19c6ff;
+            color: #07111f;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #888;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 750px) {
+
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .courses-hero h2 {
+                font-size: 32px;
+            }
+
+            .header {
+                padding: 15px 5%;
+            }
+
+            .logo-area h1 {
+                font-size: 14px;
+            }
+
+            .logo-area img {
+                width: 45px;
+                height: 45px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header class="header">
+
+    <div class="logo-area">
+
+        <img src="img/imag.png"
+             alt="University of Kerala">
+
+        <div>
+
+            <h1>Faculty of Sciences & Technology</h1>
+
+            <span>
+                Department of Computer Science
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <a href="index.html" class="back-btn">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Back
+
+    </a>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="courses-hero">
+
+    <span>
+        DEPARTMENT OF COMPUTER SCIENCE
+    </span>
+
+    <h2>Academic Programmes</h2>
+
+    <p>
+        Explore our undergraduate, postgraduate and doctoral
+        programmes designed to develop knowledge, creativity
+        and innovation in Computer Science.
+    </p>
+
+</section>
+
+
+
+<!-- COURSES -->
+
+<section class="courses">
+
+    <div class="course-grid">
+
+
+        <!-- BSC -->
+
+        <div class="course-card">
+
+            <div class="course-icon">
+
+                <i class="fa-solid fa-laptop-code"></i>
+
+            </div>
+
+            <span class="course-level">
+                UNDERGRADUATE
+            </span>
+
+            <h3>
+                B.Sc. Computer Science
+            </h3>
+
+            <p>
+                Build a strong foundation in programming,
+                algorithms, databases and software development.
+            </p>
+
+            <ul>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Programming
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Data Structures & Algorithms
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Database Systems
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Software Development
+                </li>
+
+            </ul>
+
+            <a href="#" class="course-btn">
+                View Programme
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+
+        <!-- MSC -->
+
+        <div class="course-card">
+
+            <div class="course-icon">
+
+                <i class="fa-solid fa-code"></i>
+
+            </div>
+
+            <span class="course-level">
+                POSTGRADUATE
+            </span>
+
+            <h3>
+                M.Sc. Computer Science
+            </h3>
+
+            <p>
+                Develop advanced knowledge in computing,
+                software technologies and modern computer systems.
+            </p>
+
+            <ul>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Advanced Computing
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Data Science
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Artificial Intelligence
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Software Technologies
+                </li>
+
+            </ul>
+
+            <a href="#" class="course-btn">
+                View Programme
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+
+        <!-- AI -->
+
+        <div class="course-card">
+
+            <div class="course-icon">
+
+                <i class="fa-solid fa-brain"></i>
+
+            </div>
+
+            <span class="course-level">
+                SPECIALIZATION
+            </span>
+
+            <h3>
+                M.Sc. Computer Science
+            </h3>
+
+            <p>
+                Specialization in Artificial Intelligence
+                and intelligent computational systems.
+            </p>
+
+            <ul>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Machine Learning
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Deep Learning
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Computer Vision
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Intelligent Systems
+                </li>
+
+            </ul>
+
+            <a href="#" class="course-btn">
+                View Programme
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+
+        <!-- MACHINE LEARNING -->
+
+        <div class="course-card">
+
+            <div class="course-icon">
+
+                <i class="fa-solid fa-robot"></i>
+
+            </div>
+
+            <span class="course-level">
+                SPECIALIZATION
+            </span>
+
+            <h3>
+                M.Sc. Computer Science
+            </h3>
+
+            <p>
+                Specialization in Machine Learning,
+                data analysis and predictive modelling.
+            </p>
+
+            <ul>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Machine Learning
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Predictive Modelling
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Data Analysis
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Neural Networks
+                </li>
+
+            </ul>
+
+            <a href="#" class="course-btn">
+                View Programme
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+
+        <!-- MTECH -->
+
+        <div class="course-card">
+
+            <div class="course-icon">
+
+                <i class="fa-solid fa-microchip"></i>
+
+            </div>
+
+            <span class="course-level">
+                POSTGRADUATE
+            </span>
+
+            <h3>
+                M.Tech. Computer Science
+            </h3>
+
+            <p>
+                Specialization in Digital Image Computing,
+                image processing and advanced computing.
+            </p>
+
+            <ul>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Digital Image Processing
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Computer Vision
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Pattern Recognition
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Image Analysis
+                </li>
+
+            </ul>
+
+            <a href="#" class="course-btn">
+                View Programme
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+
+        <!-- PHD -->
+
+        <div class="course-card">
+
+            <div class="course-icon">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+            </div>
+
+            <span class="course-level">
+                DOCTORAL
+            </span>
+
+            <h3>
+                Ph.D. Computer Science
+            </h3>
+
+            <p>
+                Conduct original research and contribute
+                to the advancement of Computer Science.
+            </p>
+
+            <ul>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Artificial Intelligence
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Machine Learning
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Data Science
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Computer Vision
+                </li>
+
+            </ul>
+
+            <a href="#" class="course-btn">
+                Research Opportunities
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    Department of Computer Science
+    <br>
+
+    University of Kerala
+
+</footer>
+
+
+</body>
+
+</html>

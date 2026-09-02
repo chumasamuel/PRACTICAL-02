@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Vídeo de fundo -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="img/Video.mp4" type="video/mp4">
+        O seu navegador não suporta vídeos em HTML5.
+    </video>
+    <!-- Menu lateral -->
+   <div id="menu" class="sidebar">
+
+    <a href="javascript:void(0)" class="closebtn" onclick="fecharMenu()">&times;</a>
+
+    <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+
+  <a href="#" onclick="abrirAbout()">
+    <i class="fa-solid fa-circle-info"></i> About
+</a>
+
+    <a href="professors.html"><i class="fa-solid fa-chalkboard-user"></i> Professors</a>
+
+    <a href="courses.html"><i class="fa-solid fa-book-open"></i> Courses</a>
+
+    <a href="students.html"><i class="fa-solid fa-user-graduate"></i> Students</a>
+
+   <a href="contact.html">
+    <i class="fa-solid fa-envelope"></i> Contact
+</a>
+
+</div>
+    <!-- Barra superior -->
+    <header class="topbar">
+
+        <!-- Botão do menu -->
+        <span class="menu-btn" onclick="abrirMenu()">&#9776;</span>
+
+        <!-- Logo -->
+        <div class="logo">
+            <img src="img/imag.png" alt="Logo da Universidade">
+        </div>
+
+        <!-- Título -->
+        <div class="titulo">
+            <h1>Faculty of Sciences & Technology</h1>
+        </div>
+
+<div class="login-area">
+    <button class="login-btn" onclick="abrirLogin()">
+        <i class="fa-solid fa-right-to-bracket"></i> Login
+    </button>
+</div>
+
+    </header>
+
+    <!-- Barra do departamento -->
+    <div class="subbar">
+        Department of Computer Science
+    </div>
+
+    <!-- Conteúdo -->
+    <main class="conteudo">
+        <h2>Welcome to the Department of Computer Science!</h2>
+        <p>
+            
+        </p>
+    </main>
+
+    <!-- ================= HERO SECTION ================= -->
+
+<section class="cs-hero">
+
+    <div class="hero-overlay">
+
+        <div class="hero-text">
+
+            <span class="hero-tag">DEPARTMENT OF COMPUTER SCIENCE</span>
+
+            <h2>
+                Inspiring Innovation.<br>
+                Creating the Future.
+            </h2>
+
+            <p>
+                Discover a community of students, researchers and faculty
+                working together to shape the future of computing and technology.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#programmes" class="hero-btn primary-btn">
+                    Explore Programmes
+                </a>
+
+                <a href="#research" class="hero-btn secondary-btn">
+                    Our Research
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- About Section -->
+
+<section id="aboutSection" class="about-section">
+
+    <div class="about-box">
+
+        <span class="about-close" onclick="fecharAbout()">
+            &times;
+        </span>
+
+        <h2>About Department of Computer Science</h2>
+
+        <p>
+            The Department of Computer Science, University of Kerala, was established in 1985.
+            The department offers a diverse range of academic programmes, including B.Sc Hons.
+            Computer Science with Research, M.Sc. Computer Science, M.Sc. Computer Science
+            (with specialization in Artificial Intelligence), M.Sc. Computer Science
+            (with specialization in Machine Learning), M.Tech. Computer Science
+            (with specialization in Digital Image Computing), and Ph.D. Computer Science.
+        </p>
+
+        <p>
+            Our curriculum aims to incorporate academic foundations with practical applications
+            in key areas such as artificial intelligence, machine learning, data science,
+            and software engineering. The Department prioritizes research and development
+            in addition to delivering high-quality education.
+        </p>
+
+        <p>
+            Over the past few years, the department has acquired national and international
+            importance. The department has a history of producing highly skilled professionals,
+            who have secured positions in multinational companies (MNCs), Central/State
+            Universities, Research organizations such as ISRO, C-DAC, and institutions
+            of national importance.
+        </p>
+
+        <p>
+            Till date, the department has produced more than fifty Ph.Ds. The students and
+            faculty members have published numerous research papers in reputed National and
+            International Journals/Conference Proceedings published by IEEE, Springer,
+            Elsevier, Wiley, etc.
+        </p>
+
+        <p>
+            The Department is equipped with high-performance computing infrastructure and led
+            by experienced faculty members actively involved in research and industry
+            collaborations.
+        </p>
+
+        <p>
+            The Department of Computer Science was one of the institutions in Kerala that won
+            the National Award for Best M.Tech. Thesis three times, conferred by the Indian
+            National Academy of Engineering (INAE), New Delhi.
+        </p>
+
+        <p>
+            The faculty members of the Department have been honored with prestigious awards,
+            including the AICTE Career Award for Young Teachers, the IEI Young Engineer Award,
+            and the SSI Young System Scientist Award, among others.
+        </p>
+
+    </div>
+
+</section>
+
+<script>
+function abrirMenu(){
+    document.getElementById("menu").style.width = "260px";
+}
+
+function fecharMenu(){
+    document.getElementById("menu").style.width = "0";
+}
+
+function abrirAbout(){
+
+    document.getElementById("aboutSection").style.display="flex";
+
+}
+
+
+function fecharAbout(){
+
+    document.getElementById("aboutSection").style.display="none";
+
+}
+
+
+</script>
+
+
+
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="fecharLogin()">&times;</span>
+
+        <h2>Login</h2>
+
+        <form>
+
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email" required>
+
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password" required>
+
+            <button type="submit" class="login-submit">
+                Sign In
+            </button>
+
+        </form>
+
+        <p class="register-text">
+            Don't have an account?
+            <a href="#">Click here to register.</a>
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+function abrirLogin(){
+    document.getElementById("loginModal").style.display="flex";
+}
+
+function fecharLogin(){
+    document.getElementById("loginModal").style.display="none";
+}
+
+window.onclick=function(event){
+    const modal=document.getElementById("loginModal");
+
+    if(event.target==modal){
+        modal.style.display="none";
+    }
+}
+
+</script>
+
+
+<!-- ================= PHOTO CAROUSEL ================= -->
+
+<section class="photo-carousel-section">
+
+    <div class="section-heading">
+        <span>DEPARTMENT LIFE</span>
+        <h2>Explore Our Department</h2>
+        <p>
+            Discover moments from our classrooms, laboratories,
+            seminars, conferences and student activities.
+        </p>
+    </div>
+
+    <div class="photo-carousel">
+
+        <div class="carousel-track">
+
+            <div class="carousel-slide active">
+                <img src="img/A1.jpg"
+                     alt="University campus">
+                <div class="carousel-caption">
+                    <h3>Our Campus</h3>
+                    <p>A vibrant environment for learning and innovation.</p>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <img src="img/concert1.jpg"
+                     alt="Computer science students">
+                <div class="carousel-caption">
+                    <h3>Student Community</h3>
+                    <p>Learning, collaborating and building together.</p>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <img src="img/concert2.jpg"
+                     alt="Computer science laboratory">
+                <div class="carousel-caption">
+                    <h3>Modern Laboratories</h3>
+                    <p>Technology and practical learning under one roof.</p>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <img src="img/concert3.jpg"
+                     alt="Department seminar">
+                <div class="carousel-caption">
+                    <h3>Seminars & Workshops</h3>
+                    <p>Connecting students with experts and new ideas.</p>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <img src="img/A2.jpg"
+                     alt="Computer science conference">
+                <div class="carousel-caption">
+                    <h3>Research & Conferences</h3>
+                    <p>Sharing knowledge with the global research community.</p>
+                </div>
+            </div>
+
+              <div class="carousel-slide">
+                <img src="img/A3.jpg"
+                     alt="Computer science conference">
+                <div class="carousel-caption">
+                    <h3>Research & Conferences</h3>
+                    <p>Sharing knowledge with the global research community.</p>
+                </div>
+            </div>
+
+  <div class="carousel-slide">
+                <img src="img/A4.jpg"
+                     alt="Computer science conference">
+                <div class="carousel-caption">
+                    <h3>Research & Conferences</h3>
+                    <p>Sharing knowledge with the global research community.</p>
+                </div>
+            </div>
+
+  <div class="carousel-slide">
+                <img src="img/A5.jpg"
+                     alt="Computer science conference">
+                <div class="carousel-caption">
+                    <h3>Research & Conferences</h3>
+                    <p>Sharing knowledge with the global research community.</p>
+                </div>
+            </div>
+
+  <div class="carousel-slide">
+                <img src="img/A6.jpg"
+                     alt="Computer science conference">
+                <div class="carousel-caption">
+                    <h3>Research & Conferences</h3>
+                    <p>Sharing knowledge with the global research community.</p>
+                </div>
+            </div>
+
+  <div class="carousel-slide">
+                <img src="img/A7.jpg"
+                     alt="Computer science conference">
+                <div class="carousel-caption">
+                    <h3>Research & Conferences</h3>
+                    <p>Sharing knowledge with the global research community.</p>
+                </div>
+            </div>
+
+  <div class="carousel-slide">
+                <img src="img/A8.jpg"
+                     alt="Computer science conference">
+                <div class="carousel-caption">
+                    <h3>Research & Conferences</h3>
+                    <p>Sharing knowledge with the global research community.</p>
+                </div>
+            </div>
+
+  <div class="carousel-slide">
+                <img src="img/A9.jpg"
+                     alt="Computer science conference">
+                <div class="carousel-caption">
+                    <h3>Research & Conferences</h3>
+                    <p>Sharing knowledge with the global research community.</p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Previous button -->
+        <button class="carousel-btn carousel-prev"
+                onclick="previousSlide()">&#10094;</button>
+
+        <!-- Next button -->
+        <button class="carousel-btn carousel-next"
+                onclick="nextSlide()">&#10095;</button>
+
+        <!-- Indicators -->
+        <div class="carousel-dots">
+
+    <span class="carousel-dot active" onclick="showSlide(0)"></span>
+    <span class="carousel-dot" onclick="showSlide(1)"></span>
+    <span class="carousel-dot" onclick="showSlide(2)"></span>
+    <span class="carousel-dot" onclick="showSlide(3)"></span>
+    <span class="carousel-dot" onclick="showSlide(4)"></span>
+    <span class="carousel-dot" onclick="showSlide(5)"></span>
+    <span class="carousel-dot" onclick="showSlide(6)"></span>
+    <span class="carousel-dot" onclick="showSlide(7)"></span>
+    <span class="carousel-dot" onclick="showSlide(8)"></span>
+    <span class="carousel-dot" onclick="showSlide(9)"></span>
+    <span class="carousel-dot" onclick="showSlide(10)"></span>
+    <span class="carousel-dot" onclick="showSlide(11)"></span>
+
+</div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ACADEMIC PROGRAMMES ================= -->
+
+<section class="programmes-section" id="programmes">
+
+    <div class="section-heading">
+
+        <span>ACADEMICS</span>
+
+        <h2>Academic Programmes</h2>
+
+        <p>
+            Explore our undergraduate, postgraduate and doctoral
+            programmes in Computer Science.
+        </p>
+
+    </div>
+
+    <div class="programme-grid">
+
+        <div class="programme-card">
+
+            <div class="programme-icon">
+                <i class="fa-solid fa-laptop-code"></i>
+            </div>
+
+            <h3>B.Sc. Computer Science</h3>
+
+            <p>
+                Build a strong foundation in programming, algorithms,
+                databases, software development and computing.
+            </p>
+
+            <a href="#">View Programme <i class="fa-solid fa-arrow-right"></i></a>
+
+        </div>
+
+
+        <div class="programme-card">
+
+            <div class="programme-icon">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+
+            <h3>M.Sc. Computer Science</h3>
+
+            <p>
+                Develop advanced knowledge in computing, artificial
+                intelligence, data science and software technologies.
+            </p>
+
+            <a href="#">View Programme <i class="fa-solid fa-arrow-right"></i></a>
+
+        </div>
+
+
+        <div class="programme-card">
+
+            <div class="programme-icon">
+                <i class="fa-solid fa-robot"></i>
+            </div>
+
+            <h3>Artificial Intelligence</h3>
+
+            <p>
+                Explore machine intelligence, deep learning, computer
+                vision, natural language processing and intelligent systems.
+            </p>
+
+            <a href="#">View Programme <i class="fa-solid fa-arrow-right"></i></a>
+
+        </div>
+
+
+        <div class="programme-card">
+
+            <div class="programme-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <h3>Ph.D. Computer Science</h3>
+
+            <p>
+                Conduct original research and contribute to the advancement
+                of knowledge in Computer Science.
+            </p>
+
+            <a href="#">Research Opportunities <i class="fa-solid fa-arrow-right"></i></a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= RESEARCH AREAS ================= -->
+
+<section class="research-section" id="research">
+
+    <div class="section-heading">
+
+        <span>RESEARCH</span>
+
+        <h2>Research Areas</h2>
+
+        <p>
+            Our researchers work across multiple areas of modern
+            Computer Science and emerging technologies.
+        </p>
+
+    </div>
+
+    <div class="research-grid">
+
+        <div class="research-card">
+            <i class="fa-solid fa-brain"></i>
+            <h3>Artificial Intelligence</h3>
+            <p>
+                Intelligent systems, reasoning, deep learning and
+                intelligent applications.
+            </p>
+        </div>
+
+        <div class="research-card">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>Data Science</h3>
+            <p>
+                Data analytics, predictive modelling, visualization
+                and knowledge discovery.
+            </p>
+        </div>
+
+        <div class="research-card">
+            <i class="fa-solid fa-eye"></i>
+            <h3>Computer Vision</h3>
+            <p>
+                Image processing, pattern recognition and visual
+                intelligence systems.
+            </p>
+        </div>
+
+        <div class="research-card">
+            <i class="fa-solid fa-network-wired"></i>
+            <h3>Networks & Security</h3>
+            <p>
+                Cybersecurity, computer networks, distributed systems
+                and secure computing.
+            </p>
+        </div>
+
+        <div class="research-card">
+            <i class="fa-solid fa-code"></i>
+            <h3>Software Engineering</h3>
+            <p>
+                Software architecture, development methodologies,
+                testing and intelligent software systems.
+            </p>
+        </div>
+
+        <div class="research-card">
+            <i class="fa-solid fa-cloud"></i>
+            <h3>Cloud Computing</h3>
+            <p>
+                Distributed computing, cloud platforms, scalable
+                applications and high-performance computing.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= LABORATORIES ================= -->
+
+<section class="labs-section">
+
+    <div class="section-heading">
+
+        <span>FACILITIES</span>
+
+        <h2>Our Laboratories</h2>
+
+        <p>
+            Our facilities support teaching, experimentation and
+            cutting-edge research.
+        </p>
+
+    </div>
+
+    <div class="labs-grid">
+
+        <div class="lab-card">
+            <img src="img/lab1.jpg"
+                 alt="Computer Laboratory">
+
+            <div class="lab-content">
+                <h3>Computer Laboratory</h3>
+                <p>
+                    A dedicated environment for programming,
+                    software development and practical coursework.
+                </p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+
+
+        <div class="lab-card">
+            <img src="img/lab2.jpg"
+                 alt="Artificial Intelligence Laboratory">
+
+            <div class="lab-content">
+                <h3>AI & Machine Learning Lab</h3>
+                <p>
+                    Research and experimentation in artificial
+                    intelligence and machine learning.
+                </p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+
+
+        <div class="lab-card">
+            <img src="img/lab3.jpg"
+                 alt="Research Laboratory">
+
+            <div class="lab-content">
+                <h3>Research Laboratory</h3>
+                <p>
+                    Supporting postgraduate students and researchers
+                    in advanced computing projects.
+                </p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= DEPARTMENT STATS ================= -->
+
+<!-- ================= DEPARTMENT STATS ================= -->
+
+<section class="stats-section">
+
+    <div class="stat-box">
+
+        <i class="fa-solid fa-calendar-days"></i>
+
+        <strong>1985</strong>
+
+        <span>Established</span>
+
+    </div>
+
+
+    <div class="stat-box">
+
+        <i class="fa-solid fa-user-graduate"></i>
+
+        <strong>50+</strong>
+
+        <span>Ph.D. Graduates</span>
+
+    </div>
+
+
+    <div class="stat-box">
+
+        <i class="fa-solid fa-users"></i>
+
+        <strong>1000+</strong>
+
+        <span>Alumni</span>
+
+    </div>
+
+
+    <div class="stat-box">
+
+        <i class="fa-solid fa-book"></i>
+
+        <strong>100+</strong>
+
+        <span>Research Publications</span>
+
+    </div>
+
+
+    <!-- ================= SOCIAL MEDIA ================= -->
+
+    <div class="social-media-section">
+
+        <h3>Connect With Us</h3>
+
+        <p>Follow the Department of Computer Science on social media.</p>
+
+
+        <div class="social-links">
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/universityofkerala/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="social-link facebook"
+               aria-label="Facebook">
+
+                <i class="fa-brands fa-facebook-f"></i>
+
+            </a>
+
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/universityofkerala/?hl=en"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="social-link instagram"
+               aria-label="Instagram">
+
+                <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+
+            <!-- LinkedIn -->
+            <a href="https://in.linkedin.com/school/university-of-kerala/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="social-link linkedin"
+               aria-label="LinkedIn">
+
+                <i class="fa-brands fa-linkedin-in"></i>
+
+            </a>
+
+
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/channel/UCmeyXACbOiwDOxP5NlpNDcw/videos"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="social-link youtube"
+               aria-label="YouTube">
+
+                <i class="fa-brands fa-youtube"></i>
+
+            </a>
+
+
+            <!-- X / Twitter -->
+            <a href="https://x.com/Keralauniversty"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="social-link twitter"
+               aria-label="X">
+
+                <i class="fa-brands fa-x-twitter"></i>
+
+            </a>
+
+
+            <!-- Website -->
+            <a href="https://www.keralauniversity.ac.in/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="social-link website"
+               aria-label="University Website">
+
+                <i class="fa-solid fa-globe"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+```
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const slides = document.querySelectorAll(".carousel-slide");
+    const dots = document.querySelectorAll(".carousel-dot");
+
+    let currentSlide = 0;
+    let autoSlide;
+
+    // Mostrar uma determinada imagem
+    function showSlide(index) {
+
+        // Se chegar ao fim, volta para a primeira
+        if (index >= slides.length) {
+            index = 0;
+        }
+
+        // Se for antes da primeira, vai para a última
+        if (index < 0) {
+            index = slides.length - 1;
+        }
+
+        // Remove active de todas as imagens
+        slides.forEach(slide => {
+            slide.classList.remove("active");
+        });
+
+        // Remove active dos dots
+        dots.forEach(dot => {
+            dot.classList.remove("active");
+        });
+
+        // Ativa a imagem atual
+        slides[index].classList.add("active");
+
+        // Ativa o dot correspondente, se existir
+        if (dots[index]) {
+            dots[index].classList.add("active");
+        }
+
+        currentSlide = index;
+    }
+
+    // Próxima imagem
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    // Imagem anterior
+    function previousSlide() {
+        showSlide(currentSlide - 1);
+    }
+
+    // Reiniciar o temporizador automático
+    function startAutoSlide() {
+        autoSlide = setInterval(nextSlide, 4000);
+    }
+
+    // Parar temporizador
+    function stopAutoSlide() {
+        clearInterval(autoSlide);
+    }
+
+    // Disponibilizar as funções para os onclick do HTML
+    window.showSlide = function(index) {
+        showSlide(index);
+        stopAutoSlide();
+        startAutoSlide();
+    };
+
+    window.nextSlide = function() {
+        nextSlide();
+        stopAutoSlide();
+        startAutoSlide();
+    };
+
+    window.previousSlide = function() {
+        previousSlide();
+        stopAutoSlide();
+        startAutoSlide();
+    };
+
+    // Começar automaticamente
+    showSlide(0);
+    startAutoSlide();
+
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Students | Student Management</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="students.css">
+</head>
+
+<body>
+
+
+<body>
+
+    <!-- ================= SIDE MENU ================= -->
+
+    <div id="menu" class="sidebar">
+
+        <!-- CLOSE -->
+        <a href="javascript:void(0)"
+           class="closebtn"
+           onclick="fecharMenu()">
+            &times;
+        </a>
+
+
+        <!-- HOME -->
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            Home
+        </a>
+
+
+        <!-- ABOUT -->
+        <a href="#" onclick="abrirAbout()">
+            <i class="fa-solid fa-circle-info"></i>
+            About
+        </a>
+
+
+        <!-- PROFESSORS -->
+        <a href="#">
+            <i class="fa-solid fa-chalkboard-user"></i>
+            Professors
+        </a>
+
+
+        <!-- COURSES -->
+        <a href="#">
+            <i class="fa-solid fa-book-open"></i>
+            Courses
+        </a>
+
+
+        <!-- STUDENTS -->
+        <a href="students.html" class="active-menu">
+            <i class="fa-solid fa-user-graduate"></i>
+            Students
+        </a>
+
+
+        <!-- CONTACT -->
+        <a href="#">
+            <i class="fa-solid fa-envelope"></i>
+            Contact
+        </a>
+
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="header-content">
+
+            <div>
+                <h1>Students</h1>
+                <p>Manage and monitor registered students</p>
+            </div>
+
+            <button class="add-btn">
+                + Add Student
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="container">
+
+
+        <!-- STATISTICS -->
+        <section class="cards">
+
+            <div class="card">
+
+                <div class="card-icon blue">
+                    👥
+                </div>
+
+                <div>
+                    <h2 id="totalStudents">0</h2>
+                    <p>Total Students</p>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon green">
+                    🎓
+                </div>
+
+                <div>
+                    <h2 id="totalCourses">0</h2>
+                    <p>Courses</p>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon purple">
+                    📅
+                </div>
+
+                <div>
+                    <h2 id="thisYear">0</h2>
+                    <p>New Students This Year</p>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon orange">
+                    ✓
+                </div>
+
+                <div>
+                    <h2 id="activeStudents">0</h2>
+                    <p>Active Students</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- STUDENTS TABLE -->
+        <section class="table-container">
+
+            <div class="table-header">
+
+                <div>
+                    <h2>Registered Students</h2>
+                    <p>View and manage all registered students</p>
+                </div>
+
+            </div>
+
+
+            <!-- FILTERS -->
+
+            <div class="filters">
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="🔍 Search student..."
+                >
+
+
+                <select id="courseFilter">
+
+                    <option value="">
+                        All Courses
+                    </option>
+
+                </select>
+
+
+                <select id="yearFilter">
+
+                    <option value="">
+                        All Years
+                    </option>
+
+                </select>
+
+
+                <select id="statusFilter">
+
+                    <option value="">
+                        All Status
+                    </option>
+
+                    <option value="Active">
+                        Active
+                    </option>
+
+                    <option value="Inactive">
+                        Inactive
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- TABLE -->
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+
+                            <th>Student</th>
+
+                            <th>Gender</th>
+
+                            <th>Course</th>
+
+                            <th>Entry Year</th>
+
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="studentTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+
+            <!-- PAGINATION -->
+
+            <div class="pagination">
+
+                <span id="resultCount">
+                    0 students
+                </span>
+
+                <div>
+
+                    <button>
+                        Previous
+                    </button>
+
+                    <button>
+                        Next
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="students.js"></script>
+
+
+    <!-- BACK BUTTON -->
+<a href="index.html" class="back-btn">
+    ← Back
+</a>
+</body>
+
+
+</html>

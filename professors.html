@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Faculty | Department of Computer Science</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #07111f;
+            color: white;
+        }
+
+        /* ================= HEADER ================= */
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 8%;
+            background: #081525;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-area img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+        }
+
+        .logo-area h1 {
+            font-size: 18px;
+        }
+
+        .logo-area span {
+            display: block;
+            margin-top: 5px;
+            color: #19c6ff;
+            font-size: 12px;
+        }
+
+        .back-btn {
+            text-decoration: none;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 10px 18px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #19c6ff;
+            color: #07111f;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .faculty-hero {
+            text-align: center;
+            padding: 85px 20px 65px;
+
+            background:
+                linear-gradient(
+                    rgba(5,15,30,0.82),
+                    rgba(5,15,30,0.95)
+                ),
+                url("img/A2.jpg") center/cover;
+        }
+
+        .faculty-hero span {
+            color: #19c6ff;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .faculty-hero h2 {
+            font-size: 45px;
+            margin: 15px 0;
+        }
+
+        .faculty-hero p {
+            max-width: 720px;
+            margin: auto;
+            color: #bbb;
+            line-height: 1.7;
+        }
+
+
+        /* ================= FACULTY ================= */
+
+        .faculty-section {
+            max-width: 1150px;
+            margin: auto;
+            padding: 70px 20px;
+        }
+
+        .faculty-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .faculty-title span {
+            color: #19c6ff;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .faculty-title h2 {
+            font-size: 32px;
+            margin: 10px 0;
+        }
+
+        .faculty-title p {
+            color: #aaa;
+        }
+
+
+        /* ================= CARDS ================= */
+
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .faculty-card {
+            background: #101d2d;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-7px);
+            border-color: #19c6ff;
+        }
+
+        .faculty-image {
+            height: 260px;
+            background: #0c1828;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .faculty-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Caso ainda não tenha foto */
+
+        .faculty-placeholder {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(25,198,255,0.1);
+            color: #19c6ff;
+            font-size: 40px;
+        }
+
+
+        .faculty-info {
+            padding: 25px;
+        }
+
+        .faculty-info .position {
+            color: #19c6ff;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .faculty-info h3 {
+            font-size: 21px;
+            margin: 8px 0;
+        }
+
+        .faculty-info .department {
+            color: #aaa;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+
+        /* ================= RESEARCH ================= */
+
+        .research-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-bottom: 20px;
+        }
+
+        .research-tags span {
+            padding: 6px 9px;
+            background: rgba(25,198,255,0.08);
+            border: 1px solid rgba(25,198,255,0.2);
+            border-radius: 5px;
+            color: #bbb;
+            font-size: 11px;
+        }
+
+
+        /* ================= PROFILE BUTTON ================= */
+
+        .profile-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #19c6ff;
+            border: 1px solid #19c6ff;
+            padding: 9px 15px;
+            border-radius: 7px;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .profile-btn:hover {
+            background: #19c6ff;
+            color: #07111f;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #888;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 900px) {
+
+            .faculty-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .faculty-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faculty-hero h2 {
+                font-size: 32px;
+            }
+
+            .header {
+                padding: 15px 5%;
+            }
+
+            .logo-area h1 {
+                font-size: 14px;
+            }
+
+            .logo-area img {
+                width: 45px;
+                height: 45px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo-area">
+
+        <img src="img/imag.png"
+             alt="University of Kerala">
+
+        <div>
+
+            <h1>Faculty of Sciences & Technology</h1>
+
+            <span>
+                Department of Computer Science
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <a href="index.html" class="back-btn">
+
+        <i class="fa-solid fa-arrow-left"></i>
+        Back
+
+    </a>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="faculty-hero">
+
+    <span>
+        DEPARTMENT OF COMPUTER SCIENCE
+    </span>
+
+    <h2>Our Faculty</h2>
+
+    <p>
+        Meet the faculty members of the Department of Computer Science.
+        Our professors combine academic excellence, research expertise
+        and a commitment to student learning.
+    </p>
+
+</section>
+
+
+
+<!-- ================= FACULTY ================= -->
+
+<section class="faculty-section">
+
+
+    <div class="faculty-title">
+
+        <span>ACADEMIC STAFF</span>
+
+        <h2>Faculty Members</h2>
+
+        <p>
+            Experienced educators and researchers shaping the future
+            of Computer Science.
+        </p>
+
+    </div>
+
+
+
+    <div class="faculty-grid">
+
+
+        <!-- PROFESSOR 1 -->
+
+        <div class="faculty-card">
+
+            <div class="faculty-image">
+
+                <div class="faculty-placeholder">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+            </div>
+
+            <div class="faculty-info">
+
+                <span class="position">
+                    PROFESSOR
+                </span>
+
+                <h3>
+                    Ms. Rhythu N Raj
+                </h3>
+
+                <p class="department">
+                    Department of Computer Science
+                </p>
+
+                <div class="research-tags">
+
+                    <span>Artificial Intelligence</span>
+                    <span>Machine Learning</span>
+
+                </div>
+
+                <a href="#" class="profile-btn">
+                    View Profile
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PROFESSOR 2 -->
+
+        <div class="faculty-card">
+
+            <div class="faculty-image">
+
+                <div class="faculty-placeholder">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+            </div>
+
+            <div class="faculty-info">
+
+                <span class="position">
+                    ASSOCIATE PROFESSOR
+                </span>
+
+                <h3>
+                    Dr. Vidhya M
+                </h3>
+
+                <p class="department">
+                    Department of Computer Science
+                </p>
+
+                <div class="research-tags">
+
+                    <span>Data Science</span>
+                    <span>Algorithms</span>
+
+                </div>
+
+                <a href="#" class="profile-btn">
+                    View Profile
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PROFESSOR 3 -->
+
+        <div class="faculty-card">
+
+            <div class="faculty-image">
+
+                <div class="faculty-placeholder">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+            </div>
+
+            <div class="faculty-info">
+
+                <span class="position">
+                    ASSISTANT PROFESSOR
+                </span>
+
+                <h3>
+                    Ms. Shyja Rafeek S
+                </h3>
+
+                <p class="department">
+                    Department of Computer Science
+                </p>
+
+                <div class="research-tags">
+
+                    <span>Computer Vision</span>
+                    <span>Image Processing</span>
+
+                </div>
+
+                <a href="#" class="profile-btn">
+                    View Profile
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PROFESSOR 4 -->
+
+        <div class="faculty-card">
+
+            <div class="faculty-image">
+
+                <div class="faculty-placeholder">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+            </div>
+
+            <div class="faculty-info">
+
+                <span class="position">
+                    PROFESSOR
+                </span>
+
+                <h3>
+                    Dr. D Muhammad Noorul Mubarak
+                </h3>
+
+                <p class="department">
+                    Department of Computer Science
+                </p>
+
+                <div class="research-tags">
+
+                    <span>Cyber Security</span>
+                    <span>Networks</span>
+
+                </div>
+
+                <a href="#" class="profile-btn">
+                    View Profile
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PROFESSOR 5 -->
+
+        <div class="faculty-card">
+
+            <div class="faculty-image">
+
+                <div class="faculty-placeholder">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+            </div>
+
+            <div class="faculty-info">
+
+                <span class="position">
+                    ASSOCIATE PROFESSOR
+                </span>
+
+                <h3>
+                    Dr. Vidhya M
+                </h3>
+
+                <p class="department">
+                    Department of Computer Science
+                </p>
+
+                <div class="research-tags">
+
+                    <span>Software Engineering</span>
+                    <span>Cloud Computing</span>
+
+                </div>
+
+                <a href="#" class="profile-btn">
+                    View Profile
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PROFESSOR 6 -->
+
+        <div class="faculty-card">
+
+            <div class="faculty-image">
+
+                <div class="faculty-placeholder">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+            </div>
+
+            <div class="faculty-info">
+
+                <span class="position">
+                    ASSISTANT PROFESSOR
+                </span>
+
+                <h3>
+                    Ms. Shyja Rafeek S
+                </h3>
+
+                <p class="department">
+                    Department of Computer Science
+                </p>
+
+                <div class="research-tags">
+
+                    <span>Artificial Intelligence</span>
+                    <span>Data Science</span>
+
+                </div>
+
+                <a href="#" class="profile-btn">
+                    View Profile
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    Department of Computer Science
+    <br>
+
+    University of Kerala
+
+</footer>
+
+
+</body>
+
+</html>
